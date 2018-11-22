@@ -1,0 +1,50 @@
+<div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+  <div class="wrapper wrapper--w680">
+    <div class="card card-1">
+      <div class="card-heading"></div>
+      <div class="card-body">
+        <h2 class="title">Death Person Record</h2>
+        <%= form_for(@deceased) do |f| %>
+
+
+        <div class="input-group">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, class: "input--style-1" %>
+        </div>
+
+        <div class="input-group">
+          <%= f.label :age %><br />
+          <%= f.text_field :age, class: "input--style-1" %>
+        </div>
+
+
+        <div class="input-group">
+          <%= f.label :relationship %><br />
+          <%= f.text_field :relationship, class: "input--style-1" %>
+        </div>
+<!--
+        <div class="input-group">
+          <%#= f.label :users%>
+          <%#= f.text_field :users_id, class: 'input--style'   %>
+        </div> -->
+
+
+        <div class="input-group">
+          <%= f.label :DeathDate %><br />
+          <%= f.text_field :death_date, class: "input--style-1" %>
+        </div>
+
+
+
+        <div class="p-t-20">
+          <%= f.submit " submit" ,class: "btn btn--radius btn--green"  %>
+        </div>
+        <% end %>
+
+        <%#= render "users/shared/links" %>
+
+
+      </div>
+    </div>
+  </div>
+</div>

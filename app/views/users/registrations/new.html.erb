@@ -1,0 +1,67 @@
+<div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+  <div class="wrapper wrapper--w680">
+    <div class="card card-1">
+      <div class="card-heading"></div>
+      <div class="card-body">
+        <h2 class="title">Registration Info</h2>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="input-group">
+          <%= f.label :first_name %><br />
+          <%= f.text_field:first_name, class: "input--style-1" %>
+        </div>
+
+
+        <div class="input-group">
+          <%= f.label :last_name %><br />
+          <%= f.text_field :last_name , class: "input--style-1"%>
+        </div>
+
+
+        <div class="input-group">
+          <%= f.label :age%><br />
+          <%= f.text_field :age,class: "input--style-1" %>
+        </div>
+
+
+
+
+
+        <div class="input-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, class: "input--style-1" %>
+        </div>
+
+
+        <div class="input-group">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, class: "input--style-1", autocomplete: "new-password" %>
+        </div>
+
+
+        <div class="input-group">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, class: "input--style-1",  autocomplete: "new-password" %>
+        </div>
+
+
+        <div class="p-t-20">
+          <%= f.submit "Sign up" ,class: "btn btn--radius btn--green"  %>
+        </div>
+        <% end %>
+
+
+
+        <%= render "users/shared/links" %>
+        <div class="p-t-20">
+          <%= link_to "Login", new_user_session_path, class: "btn btn--radius btn--green" %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
