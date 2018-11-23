@@ -3,7 +3,7 @@ class CreateDeceaseds < ActiveRecord::Migration[5.2]
     create_table :deceaseds do |t|
       t.string :name
       t.string :age
-      t.references :user_id, index: true, foreign_key: { to_table: :users }
+      t.references :user, index: true
       t.string  :relationship
       t.date :death_date # TODO: conventions issue
       t.timestamps

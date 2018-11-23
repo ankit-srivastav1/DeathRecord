@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_deceased_path(@deceased) %> |
+<%= link_to 'Back', deceaseds_path %>
+
+<div>
+  <aside class="col-md-10">
+    <div class="deceased_info">
+
+<table>
+      <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>death_date</th>
+        <th>relationship</th>
+        <th>user_id</th>
+      </tr>
+
+
+
+
+      <tr>
+        <td><%= @deceased.name %></td><br>
+
+
+        <td><%= @deceased.age %></td><br>
+
+        <td><%= @deceased.death_date %></td><br>
+
+        <td><%= @deceased.relationship %></td><br>
+
+        <td><%= @deceased.user.try(:id) %></td>
+      </tr>
+      </table>
+    </div>
+  </aside>
+</div>

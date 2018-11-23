@@ -10,17 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_084430) do
+ActiveRecord::Schema.define(version: 2018_11_23_065737) do
+
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_books_on_user_id"
+  end
 
   create_table "deceaseds", force: :cascade do |t|
     t.string "name"
     t.string "age"
-    t.integer "user_id_id"
+    t.integer "user_id"
     t.string "relationship"
     t.date "death_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_deceaseds_on_user_id_id"
+    t.index ["user_id"], name: "index_deceaseds_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

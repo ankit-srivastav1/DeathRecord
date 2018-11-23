@@ -1,0 +1,35 @@
+<h1>Edit</h1>
+<br>
+
+<%= render 'form', deceased: @deceased %>
+
+<%= link_to 'Show', @deceased %> |
+<%= link_to 'Back', deceaseds_path %>
+
+<div class = "row"  >
+<div class = "col-md-6 col-md-offset-3">
+
+  <%= form_for@deceased do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name , class: 'form-control' %>
+
+  <%= f.label :age %>
+  <%= f.text_field :name , class: 'form-control' %>
+
+  <%= f.label :death_date %>
+  <%= f.text_field :death_date , class: 'form-control' %>
+
+
+    <%= f.label :relationship %>
+    <%= f.text_field :relationship , class: 'form-control' %>
+
+
+
+  <%= f.label :user_id %>
+  <%= f.text_field :user_id %>
+
+  <%= f.submit "submit", class: "btn-btn-primary" %>
+
+   <% end %>
+ </div>
+</div>

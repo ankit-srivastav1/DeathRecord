@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :deceased 
+  has_many :deceaseds
 
   validates :email ,     presence:  true
   validates :first_name , presence: true

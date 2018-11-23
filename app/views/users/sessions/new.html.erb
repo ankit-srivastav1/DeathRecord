@@ -5,6 +5,8 @@
       <div class="card-body">
         <h2 class="title">Login</h2>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= flash[:alert] %>
+        <%= flash[:notice] %>
         <div class="input-group">
           <%= f.label :email %><br />
           <%= f.email_field :email, class: "input--style-1", autofocus: true, autocomplete: "email" %>
