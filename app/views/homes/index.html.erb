@@ -1,20 +1,17 @@
-
-
-
 <p id="notice"><%= notice %></p>
-
-
-
-<table>
-  <thead>
-    <tr>
-      <th>Deceased  people list</th>
+<thead>
+  <tr>
+    <center><h3>
+      <b>Deceased  people list</b>
       <th colspan="3"></th>
-    </tr>
-  </thead>
+    </h3></center>
+  </tr>
+</thead>
+<br>
+<br>
 
-  <tbody>
-    <% @deceased.each do |deceased| %>
+<table class="table table-dark">
+  <thead>
     <tr>
       <th>name</th>
       <th>age</th>
@@ -22,7 +19,11 @@
       <th>relationship</th>
       <th>user_id</th>
     </tr>
+  </thead>
 
+  <% @deceased.each do |deceased| %>
+
+  <tbody>
     <tr>
       <td><%= deceased.name %></td>
       <td><%= deceased.age %></td>
@@ -30,8 +31,6 @@
       <td><%= deceased.relationship %></td>
       <td><%= deceased.user_id %></td>
     </tr>
-
-
     <% end %>
   </tbody>
 </table>

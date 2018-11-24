@@ -2,35 +2,31 @@
 
 <%= link_to 'Edit', edit_deceased_path(@deceased) %> |
 <%= link_to 'Back', deceaseds_path %>
+<br>
+<br>
 
 <div>
   <aside class="col-md-10">
     <div class="deceased_info">
 
-<table>
-      <tr>
-        <th>name</th>
-        <th>age</th>
-        <th>death_date</th>
-        <th>relationship</th>
-        <th>user_id</th>
-      </tr>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>death_date</th>
+            <th>relationship</th>
+            <th>user_id</th>
+          </tr>
+        </thead>
 
-
-
-
-      <tr>
-        <td><%= @deceased.name %></td><br>
-
-
-        <td><%= @deceased.age %></td><br>
-
-        <td><%= @deceased.death_date %></td><br>
-
-        <td><%= @deceased.relationship %></td><br>
-
-        <td><%= @deceased.user.try(:id) %></td>
-      </tr>
+        <tr>
+          <td><%= @deceased.name %></td>
+          <td><%= @deceased.age %></td>
+          <td><%= @deceased.death_date %></td>
+          <td><%= @deceased.relationship %></td>
+          <td><%= @deceased.user.try(:id) %></td>
+        </tr>
       </table>
     </div>
   </aside>
