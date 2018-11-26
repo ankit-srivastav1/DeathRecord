@@ -12,9 +12,34 @@
 //
 
 //= require jquery
+//= require jquery.ui.all
 //= require rails-ujs
-//= require turbolinks
+//= require gmaps-auto-complete
+// require turbolinks
 //= require bootstrap-sprockets
 //= require activestorage
-//= require bootstrap-sprockets
-//= require_tree .
+// require_tree .
+
+
+$(document).ready(function() {
+  jQuery(function() {
+    var completer;
+
+    completer = new GmapsCompleter({
+      inputField: 'deceased_address',
+      errorField: '#gmaps-error'
+    });
+
+    completer.autoCompleteInit({
+      country: "us"
+    });
+  });
+});
+
+
+
+$(document).ready(function() {
+  var completer;
+  completer = new GmapsCompleter({inputField: 'deceased_address', errorField: 'form#search #address_error'});
+  completer.autoCompleteInit({region: 'DK'});
+});

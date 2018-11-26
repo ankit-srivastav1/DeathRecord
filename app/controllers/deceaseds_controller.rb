@@ -3,6 +3,7 @@ class DeceasedsController < ApplicationController
 
   def index
     @deceased= current_user.deceaseds
+
   end
 
   def new
@@ -11,6 +12,7 @@ class DeceasedsController < ApplicationController
 
   def show
     @deceased = Deceased.find(params[:id])
+   @deceased = Deceased.new name: :property, mode: @mode
   end
 
   def create
@@ -48,6 +50,6 @@ class DeceasedsController < ApplicationController
   private
 
   def deceased_params
-    params.require(:deceased).permit(:name,:age,:relationship,:death_date,:users_id)
+    params.require(:deceased).permit(:name,:age,:relationship,:death_date,:address,:users_id)
   end
 end

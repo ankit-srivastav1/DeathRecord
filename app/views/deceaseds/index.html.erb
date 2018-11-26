@@ -21,7 +21,9 @@
         <th>age</th>
         <th>DeathDate</th>
         <th>relationship</th>
+        <th>address</th>
         <th>user_id</th>
+
       </tr>
       <thead>
         <% @deceased.each do |deceased| %>
@@ -31,6 +33,7 @@
             <td><%= deceased.age %></td>
             <td><%= deceased.death_date %></td>
             <td><%= deceased.relationship %></td>
+            <td><%= deceased.address %></td>
             <td><%= deceased.user_id %></td>
           </tr>
         </tbody>
